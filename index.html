@@ -12,6 +12,20 @@
   <main id="main" role="main" aria-labelledby="page-title">
     <h1 id="page-title">Hello world</h1>
     <h2 lang="th">สวัสดีครับ</h2>
+    <script>
+        fetch("data.json")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("school").textContent = data.school;
+                document.getElementById("students").textContent = data.students;
+                document.getElementById("teachers").textContent = data.teachers;
+                document.getElementById("location").textContent = data.location;
+            })
+            .catch(error => {
+                console.error("Error loading JSON:", error);
+            });
+    </script>
+    
     <img src="https://lh3.googleusercontent.com/d/0B1Vdhzx7qeUVNnFJaWNEZVVteWM" alt="" width="104" height="142">
     <iframe src="https://drive.google.com/file/d/1FCC_rJSPAVDvhd0epPjQrHctivmxds7S/preview" 
         width="640" 
