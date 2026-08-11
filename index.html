@@ -16,10 +16,10 @@
         fetch("data1.json")
             .then(response => response.json())
             .then(data => {
-                document.getElementById("school").textContent = data.school;
-                document.getElementById("students").textContent = data.students;
-                document.getElementById("teachers").textContent = data.teachers;
-                document.getElementById("location").textContent = data.location;
+                document.getElementById("school").textContent = data1.school;
+                document.getElementById("students").textContent = data1.students;
+                document.getElementById("teachers").textContent = data1.teachers;
+                document.getElementById("location").textContent = data1.location;
             })
             .catch(error => {
                 console.error("Error loading JSON:", error);
